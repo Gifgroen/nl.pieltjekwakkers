@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block custom_style %}
+    {% load staticfiles %}
+	<link href="{% static 'css/nieuws.less' %}" rel="stylesheet/less" type="text/css" />
+	<link href="{% static 'css/info.less' %}" rel="stylesheet/less" type="text/css" />
+{% endblock %}
+
+{% block title %}Welkom op de site van D.V. de Pieltjekwakkers{% endblock %}
+
+{% block content %}
+	<div class="content">
+		<div class='title'>Over deze club</div>
+		<div class="message">
+			Hier komt een mooi verhaal.	
+		</div>
+	</div>
+{% endblock %}

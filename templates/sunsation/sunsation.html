@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Welkom op de site van D.V. de Pieltjekwakkers{% endblock %}
+
+{% block custom_style %}
+    {% load staticfiles %}
+	<link href="{% static 'css/nieuws.less' %}" rel="stylesheet/less" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    <div class="content">
+        <div class='title'>Flyer</div>
+        <div class="message">
+            <img src="{% static 'images/SunsationOpen2012.jpg' %}" style="margin-left: 20%;" />
+        </div>
+        <div class="info"> &nbsp; </div>
+    </div>
+{% endblock %}

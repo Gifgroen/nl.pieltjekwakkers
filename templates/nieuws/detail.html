@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Welkom op de site van D.V. de Pieltjekwakkers{% endblock %}
+
+{% block custom_style %}
+    {% load staticfiles %}
+	<link href="{% static 'css/nieuws.less' %}" rel="stylesheet/less" type="text/css" />
+{% endblock %}
+
+{% block content %}
+	{% if artikel %}
+		<div class="content">
+			<div class='title'>{{artikel.titel}}</div>
+			<div class="message">
+				{{artikel.bericht}}
+			</div>
+			<div class="info">Geplaatst op {{artikel.datum}}</div>
+		</div>
+	{% else %}
+	    <div>Er zijn geen artikelen.</div>
+	{% endif %}
+{% endblock %}

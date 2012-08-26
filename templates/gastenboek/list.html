@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Welkom op de site van D.V. de Pieltjekwakkers{% endblock %}
+
+{% block custom_style %}
+    {% load staticfiles %}
+	<link href="{% static 'css/gastenboek.less' %}" rel="stylesheet/less" type="text/css" /> 
+	<!-- ^ TODO -->
+{% endblock %}
+
+{% block content %}
+	{% if reacties %}
+	    {% for reactie in reacties %}
+			<div class="content">
+				<div class='title'>{{reactie.naam}}</div>
+				<div class="message">
+					{{reactie.bericht|truncatewords:100 }} 
+					<a href="/nieuws/{{artikel.id}}">[Lees meer...]</a>
+				</div>
+				<div class="info">Geplaatst op {{reactie.datum}}</div>
+			</div>
+	    {% endfor %}
+	{% else %}
+		<div class="content">
+			<div class='title'>Gastenboek</div>
+			<div class="message">
+				Er zijn helaas nog geen reacties. Het plaatsen van reacties is een functionaliteit die snel wordt aangevuld. Kom later nog eens terug.
+			</div>
+		</div>
+	{% endif %}
+{% endblock %}
