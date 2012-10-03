@@ -22,4 +22,5 @@ urlpatterns = patterns('',
     url(r'^nieuws/$', 'nieuws.views.list'),
     url(r'^nieuws/(?P<artikel_id>\d+)/$', 'nieuws.views.detail'),    
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^contact/', 'contact.views.info'),
 )

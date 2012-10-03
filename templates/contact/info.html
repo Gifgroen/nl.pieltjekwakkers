@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block title %}Welkom op de site van D.V. de Pieltjekwakkers{% endblock %}
+
+{% block custom_style %}
+    {% load staticfiles %}
+	<link href="{% static 'css/gastenboek.less' %}" rel="stylesheet/less" type="text/css" /> 
+{% endblock %}
+
+{% block content %}
+	<div class="content">
+	    <div class='title'>Flyer</div>
+	    <div class="message">
+			<table>
+				<thead>
+				<tr><td><h3>Bestuursinformatie:</h3></tr></td>
+				</thead>
+				<tbody>
+					<tr>
+					<td>Voorzitter:</td>
+					<td>
+						Henk Eilander <br />
+						Molenweg 8 <br />
+						9991 AR Middelstum <br />
+						Tel. 0595-551911 <br />
+						Mob. 06-15155550 <br />
+						<a href="mailto:henkeilander@wanadoo.nl">henkeilander@wanadoo.nl</a>
+					</td>
+					</tr>
+					<tr>
+						<td>Penningmeester:</td>
+						<td>
+							Tjaart Huizinga <br />
+							Florastraat 13 <br />
+							9991 CH Middelstum <br />
+							Tel. 0595-552341 <br />
+							Mob. 06-47682621 <br />
+							<a href="mailto:t.huizinga@wanadoo.nl">t.huizinga@wanadoo.nl</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Secretaris:			
+						</td>
+						<td>
+							Okko Wiersma <br />
+							Boerdamsterweg 25 <br />
+							9991 BM Middelstum <br />
+							Tel. 0595-557163 <br />
+							Mob. 06-10574284
+						</td>
+					</tr>
+					<tr>
+						<td>Activiteiten commissie</td>
+						<td>
+							Ron Slager <br />
+							Kwekerstraat 16 <br />
+							9991 BS Middelstum <br />
+							06-13084879 <br />
+							<a href="mailto:ronslager@hotmail.com">ronslager@hotmail.com</a>
+						</td>
+					</tr>
+					<tr>
+						<td></td>
+						<td>
+							Peter Timmer <br />
+							Lange Akker 42 <br />
+							9982 HL Uithuizermeeden <br />
+							Mob.06-52450473 <br />
+						 	<a href="mailto:Pieltjekwakkers-redactie@live.nl">Pieltjekwakkers-redactie@live.nl</a>
+						</td>
+					</tr>
+					</tbody>
+
+					<thead><tr><td><h3>Speelavonden:</h3></tr></td></thead>
+					<tbody>
+						<tr>
+							<td>Maandag</td>
+							<td>Vanaf 20.00 uur (tevens competitie)</td>
+						</tr>
+
+						<tr>
+							<td>Vrijdag</td>
+							<td>Vanaf 20.00 uur ( Vrije Dartavond )</td>
+						</tr>
+					</tbody>
+					
+					
+					<thead><tr><td><h3>Speelavonden:</h3></tr></td></thead>
+					<tbody>
+						<tr>
+							<td>Lokatie:</td>
+							<td>
+								Multifunctioneel Dorpscentrum Middelstum<br />
+								G.Alberdastraat 8<br />
+								9991 CT Middelstum<br />
+								Tel: 0595-551979
+							</td>
+						</tr>
+					</tbody>
+					
+					<thead><tr><td><h3>Speelavonden:</h3></tr></td></thead>
+					<tbody>
+						<tr>
+							<td>Contributie:</td>
+							<td>
+								3,50 euro per maand<br />
+								42,00 Euro per Jaar<br />
+								42,50 Euro per jaar (Competitie gelden D.O.G.D.)<br />
+							</td>
+						</tr>
+					</tbody>
+					
+				</table>
+			</table>
+	    </div>
+	</div>
+{% endblock %}
