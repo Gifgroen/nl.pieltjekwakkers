@@ -12,8 +12,8 @@
 	    {% for artikel in artikelen %}
 			<div class="content">
 				<div class='title'>{{artikel.titel}}</div>
-				<div class="message"> 
-					{% if artikel.bericht|length <= 150 %}
+				<div class="message">
+					{% if artikel.bericht|wordcount <= 150 %}
 						{{artikel.bericht}}
 					{% else %}
 						{{artikel.bericht|truncatewords:150 }}

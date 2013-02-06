@@ -4,7 +4,7 @@ import os.path
 PROJECT_DIR = os.path.dirname(__file__)
 ROOT_DIR = os.path.dirname(PROJECT_DIR)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
