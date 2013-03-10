@@ -12,11 +12,11 @@
 	    {% for artikel in artikelen %}
 			<div class="content">
 				<div class='title'>{{artikel.titel}}</div>
-				<div class="message"> 
-					{% if artikel.bericht|length <= 150 %}
-						{{artikel.bericht}}
+				<div class="message">
+					{% if artikel.bericht|wordcount <= 150 %}
+						{{artikel.bericht|linebreaks}}
 					{% else %}
-						{{artikel.bericht|truncatewords:150 }}
+						{{artikel.bericht|truncatewords:150}}
 						<a href="/nieuws/{{artikel.id}}">[Lees meer...]</a>
 					{% endif %}
 				</div>
