@@ -16,7 +16,7 @@
 					{% if artikel.bericht|wordcount <= 150 %}
 						{{artikel.bericht|linebreaks}}
 					{% else %}
-						{{artikel.bericht|truncatewords:150}}
+						{{artikel.bericht|truncatewords:150|linebreaks}}
 						<a href="/nieuws/{{artikel.id}}">[Lees meer...]</a>
 					{% endif %}
 				</div>

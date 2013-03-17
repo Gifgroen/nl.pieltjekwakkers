@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block custom_style %}
+    {% load staticfiles %}
+		<link href="{% static 'css/nieuws.less' %}" rel="stylesheet/less" type="text/css" />
+		{% endblock %}
+
+		{% block title %}Welkom op de site van D.V. de Pieltjekwakkers{% endblock %}
+
+		{% block content %}
+			<div class="content">
+						<div class='title'>We hebben een klein probleempje.</div>
+								<div class="message">
+												<h1>500</h1>
+															Ik kon de pagina die je zocht helaas niet vinden.
+																	</div>
+																		</div>
+																		{% endblock %}

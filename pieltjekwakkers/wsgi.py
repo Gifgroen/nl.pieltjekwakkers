@@ -14,6 +14,9 @@ framework.
 
 """
 import os
+import site 
+
+site.addsitedir('/home/me/virtual_envs/pieltjekwakkers/lib/python2.7/site-packages') 
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "pieltjekwakkers.settings")
 
