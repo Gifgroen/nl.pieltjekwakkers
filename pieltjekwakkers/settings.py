@@ -139,7 +139,7 @@ INSTALLED_APPS = (
     'clubinfo',
     'gastenboek',
     'sunsation',
-	'contact',
+    'contact',
 )
 
 # A sample logging configuration. The only tangible logging
