@@ -4,7 +4,7 @@ import os.path
 PROJECT_DIR = os.path.dirname(__file__)
 ROOT_DIR = os.path.dirname(PROJECT_DIR)
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -13,20 +13,35 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',   # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'me',                      # Or path to database file if using sqlite3.
-        'USER': 'me',                      # Not used with sqlite3.
-        'PASSWORD': 'klopgeest',                # Not used with sqlite3.
-        'HOST': 'localhost',                             # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                             # Set to empty string for default. Not used with sqlite3.
+ENV = "PRODUCTION"
+
+if ENV == "LOCAL":
+	DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',   # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': 'dev.db',                      # Or path to database file if using sqlite3.
+            'USER': '',                      # Not used with sqlite3.
+            'PASSWORD': '',                # Not used with sqlite3.
+            'HOST': '',                             # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': '',                             # Set to empty string for default. Not used with sqlite3.
+        }
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql_psycopg2',   # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+            'NAME': 'me',                      # Or path to database file if using sqlite3.
+            'USER': 'me',                      # Not used with sqlite3.
+            'PASSWORD': 'klopgeest',                # Not used with sqlite3.
+            'HOST': 'localhost',                             # Set to empty string for localhost. Not used with sqlite3.
+            'PORT': '',                             # Set to empty string for default. Not used with sqlite3.
+        }
+    }
 
 ALLOWED_HOSTS = [
 	'www.pieltjekwakkers.nl',
 	'pieltjekwakkers.nl',
+	'localhost',
 ]
 
 # Local time zone for this installation. Choices can be found here:
@@ -124,6 +139,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
+	'django_admin_bootstrapped',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
