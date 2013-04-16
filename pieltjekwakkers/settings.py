@@ -4,7 +4,7 @@ import os.path
 PROJECT_DIR = os.path.dirname(__file__)
 ROOT_DIR = os.path.dirname(PROJECT_DIR)
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
@@ -41,7 +41,6 @@ else:
 ALLOWED_HOSTS = [
 	'www.pieltjekwakkers.nl',
 	'pieltjekwakkers.nl',
-	'localhost',
 ]
 
 # Local time zone for this installation. Choices can be found here:
