@@ -43,6 +43,9 @@ ALLOWED_HOSTS = [
 	'pieltjekwakkers.nl',
 ]
 
+if ENV == 'LOCAL':
+	ALLOWED_HOSTS.append('localhost') 
+
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
@@ -137,7 +140,7 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-#	'django_admin_bootstrapped',
+    'django_admin_bootstrapped',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
